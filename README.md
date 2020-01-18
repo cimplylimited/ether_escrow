@@ -3,4 +3,4 @@
 
 Ether (Ξ) escrow and arbitration program maintained by lexDAO.
 
-[v1 deployed on Ethereum Mainnet](https://etherscan.io/dapp/0x8b861797b3b67b8017ad7f251afff9bcf492110e) 🏦
+[v2 deployed on Ethereum Mainnet](https://etherscan.io/address/0xf8bb603941d555559a6b7b6a406dee5db8c8802f#code) 🏦
