@@ -1,7 +1,3 @@
-/**
- *Submitted for verification at Etherscan.io on 2020-01-18
-*/
-
 pragma solidity ^0.5.2;
 
 // LEE is a digital escrow program in beta. Use at your own risk. || lexDAO ||
