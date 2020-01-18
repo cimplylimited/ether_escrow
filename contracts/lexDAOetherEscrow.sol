@@ -1,3 +1,7 @@
+/**
+ *Submitted for verification at Etherscan.io on 2020-01-18
+*/
+
 pragma solidity ^0.5.2;
 
 // LEE is a digital escrow program in beta. Use at your own risk. || lexDAO ||
@@ -64,7 +68,7 @@ contract lexDAOetherEscrow {
 
 contract lexDAOetherEscrowFactory {
     
-    uint8 public LEEversion = 1;
+    uint8 public LEEversion = 2;
     
     address payable public arbitrator = 0x97103fda00a2b47EaC669568063C00e65866a633; // lexDAO Agent
     
@@ -93,14 +97,11 @@ contract lexDAOetherEscrowFactory {
         escrows.push(address(LEE));
         
         emit Deployed(address(LEE), msg.sender, _seller);
+
     }
     
     function getEscrowCount() public view returns (uint256 escrowCount) {
         return escrows.length;
-    }
-    
-    function getEscrowAddresses() public view returns (address[] memory) {
-        return escrows;
     }
     
     function updateArbitrator(address payable newArb) public {
