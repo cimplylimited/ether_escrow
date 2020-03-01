@@ -32,6 +32,7 @@ contract lexDAOetherEscrow {
     function release() public {
         require(msg.sender == buyer);
         require(disputed == false);
+        require(closed == false);
         address(seller).transfer(price);
         closed = true;
         emit Released(price);
@@ -48,6 +49,7 @@ contract lexDAOetherEscrow {
     function resolve(uint256 buyerAward, uint256 sellerAward) public {
         require(msg.sender == arbitrator);
         require(disputed == true);
+        require(closed == false);
         uint256 arbFee = price / 20;
         require(buyerAward + sellerAward + arbFee == price);
         address(buyer).transfer(buyerAward);
@@ -64,7 +66,7 @@ contract lexDAOetherEscrow {
 
 contract lexDAOetherEscrowFactory {
     
-    uint8 public LEEversion = 2;
+    uint8 public LEEversion = 3;
     
     address payable public arbitrator = 0x97103fda00a2b47EaC669568063C00e65866a633; // lexDAO Agent
     
